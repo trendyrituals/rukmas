@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html  >
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="/static/assets/images/rukmas-favicon-128x134.png" type="image/x-icon">
+  <meta name="description" content="">
+
+
+  <title>Home</title>
+  <link rel="stylesheet" href="/static/assets/web/assets/mobirise-icons2/mobirise2.css">
+  <link rel="stylesheet" href="/static/assets/icons-mind/style.css">
+  <link rel="stylesheet" href="/static/assets/web/assets/mobirise-icons-bold/mobirise-icons-bold.css">
+  <link rel="stylesheet" href="/static/assets/tether/tether.min.css">
+  <link rel="stylesheet" href="/static/assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="/static/assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="/static/assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="/static/assets/socicon/css/styles.css">
+  <link rel="stylesheet" href="/static/assets/theme/css/style.css">
+  <link rel="preload" as="style" href="/static/assets/mobirise/css/mbr-additional.css">
+  <link rel="stylesheet" href="/static/assets/mobirise/css/mbr-additional.css" type="text/css">
+
+
+
+<meta name="theme-color" content="#ff513c">
+<link rel="manifest" href="/static/manifest.json">
+<script src="/static/sw-connect.js"></script>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="assets/images/apple-launch-640x1136.png">
+<link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="assets/images/apple-launch-750x1334.png">
+<link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="assets/images/apple-launch-1242x2208.png">
+<link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="assets/images/apple-launch-1125x2436.png">
+<link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="assets/images/apple-launch-1536x2048.png">
+<link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="assets/images/apple-launch-1668x2224.png">
+<link rel="apple-touch-startup-image" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="assets/images/apple-launch-2048x2732.png">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="RUKMAS">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+</head>
+<body>
+
+  <section class="extMenu6 menu cid-sutFu7nUCh" once="menu" id="extMenu6-2">
+
+
+
+
+    <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
+        <div class="navbar-brand">
+            <span class="navbar-logo">
+                <a href="#">
+                    <img src="/static/assets/images/original-on-transparent-254x72.png" alt="" style="height: 2.8rem;">
+                </a>
+            </span>
+
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true"><li class="nav-item"><a class="nav-link link text-info text-primary display-4" href="/" aria-expanded="false">
+                        HOME</a></li>
+
+
+                <li class="nav-item"><a class="nav-link link text-info text-primary display-4" href="/market_place" aria-expanded="false">LIVE AUCTION</a></li><li class="nav-item"><a class="nav-link link text-info text-primary display-4" href="/about" aria-expanded="false">ABOUT</a></li></ul>
+            <div class="navbar-buttons px-2 mbr-section-btn">
+
+              {% if request.user.is_authenticated %}
+              <a class="btn btn-sm btn-success display-4" href="/auth/logout">LOGOUT</a>
+              {% else %}
+              <a class="btn btn-sm btn-success display-4" href="/auth/login">LOGIN</a>
+              {% endif %}
+
+            </div>
+
+
+
+        </div>
+    </nav>
+</section>
+
+<section class="features03 cid-rZq2VsLpyN" id="features03-a">
+
+
+
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 mb-5">
+                <h3 class="mbr-section-title mbr-bold align-center mbr-fonts-style display-2">Short Period&nbsp;<span>Active</span>&nbsp;Bids</h3>
+                <h4 class="mbr-section-subtitle pb-1 align-center mbr-regular mbr-fonts-style display-7">The Car
+                    Repair Appointment</h4>
+
+            </div>
+        </div>
+        <div class="row row-content justify-content-center">
+
+          <!-- product list -->
+
+          {% for i in product %}
+
+
+
+            <div class="card col-12 col-md-6 col-lg-4">
+                <div class="card-wrapper">
+                    <div class="card-img">
+                        <img src="/media/{{ i.img }}" title="">
+                    </div>
+
+                    <div class="card-box">
+                        <div class="sticky-tag">
+                            <p class="mbr-text mbr-fonts-style card-text mbr-normal display-4">New</p>
+                        </div>
+                        <h4 class="card-title mbr-fonts-style mbr-bold display-7">{{ i.company_name }} {{ i.model }} {{ i.sub_class }}</h4>
+                        <p class="mbr-text mbr-fonts-style card-text mbr-normal display-4">
+                            <strong>Km</strong> {{ i.driven }} <br>
+                            <strong>year</strong> {{ i.year }}<br>
+                            <strong>price</strong> {{ i.expected_price }}<br>
+
+                        </p>
+                        <div class="ico-line d-flex">
+                            <div class="wrap-left">
+                                <div class="pb-3 mbr-iconfont mbr-iconfont-social mbrib-clock" media-simple="true"></div>
+                                <h3 class="rev mbr-fonts-style display-4">
+                                    {{ i.time }}
+                                </h3>
+                            </div>
+                            <div class="right-wrap">
+                                <div class="pb-3 mbr-iconfont mbr-iconfont-social mbrib-hearth" media-simple="true"></div>
+                                <h3 class="rev mbr-fonts-style display-4">
+                                    0
+                                </h3>
+                                <div class="ml-3 pb-3 mbr-iconfont mbr-iconfont-social mbrib-help" media-simple="true"></div>
+                                <h3 class="rev mbr-fonts-style display-4">
+                                    0
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="mbr-section-btn"><a href="/market_place/product_view/{{ i.id }}" class="btn btn-sm btn-primary-outline display-4">View</a></div>
+                    </div>
+                </div>
+            </div>
+
+            {% endfor %}
+
+
+<!--
+            <div class="card col-12 col-md-6 col-lg-4">
+                <div class="card-wrapper">
+                    <div class="card-img">
+                        <img src="/static/assets/images/07.jpg" title="">
+                    </div>
+                    <div class="card-box">
+                        <div class="sticky-tag">
+                            <p class="mbr-text mbr-fonts-style card-text mbr-normal display-4">
+                                New</p>
+                        </div>
+                        <h4 class="card-title mbr-fonts-style mbr-bold display-7">
+                            Lorem ipsum dolor sit amet
+                        </h4>
+                        <p class="mbr-text mbr-fonts-style card-text mbr-normal display-4">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
+                        <div class="ico-line d-flex">
+                            <div class="wrap-left">
+                                <div class="pb-3 mbr-iconfont mbr-iconfont-social mbrib-clock" media-simple="true"></div>
+                                <h3 class="rev mbr-fonts-style display-4">
+                                    Year ago
+                                </h3>
+                            </div>
+                            <div class="right-wrap">
+                                <div class="pb-3 mbr-iconfont mbr-iconfont-social mbrib-hearth" media-simple="true"></div>
+                                <h3 class="rev mbr-fonts-style display-4">
+                                    0
+                                </h3>
+                                <div class="pb-3 ml-3 mbr-iconfont mbr-iconfont-social mbrib-help" media-simple="true"></div>
+                                <h3 class="rev mbr-fonts-style display-4">
+                                    0
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="mbr-section-btn"><a href="/market_place/product_view" class="btn btn-sm btn-primary-outline display-4">View</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card col-12 col-md-6 col-lg-4">
+                <div class="card-wrapper">
+                    <div class="card-img">
+                        <img src="/static/assets/images/08.jpg" title="">
+                    </div>
+                    <div class="card-box">
+                        <div class="sticky-tag">
+                            <p class="mbr-text mbr-fonts-style card-text mbr-normal display-4">
+                                New</p>
+                        </div>
+                        <h4 class="card-title mbr-fonts-style mbr-bold display-7">
+                            Lorem ipsum dolor sit amet
+                        </h4>
+                        <p class="mbr-text mbr-fonts-style card-text mbr-normal display-4">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
+                        <div class="ico-line d-flex">
+                            <div class="wrap-left">
+                                <div class="pb-3 mbr-iconfont mbr-iconfont-social mbrib-clock" media-simple="true"></div>
+                                <h3 class="rev mbr-fonts-style display-4">
+                                    Year ago
+                                </h3>
+                            </div>
+                            <div class="right-wrap">
+                                <div class="pb-3 mbr-iconfont mbr-iconfont-social mbrib-hearth" media-simple="true"></div>
+                                <h3 class="rev mbr-fonts-style display-4">
+                                    0
+                                </h3>
+                                <div class="pb-3 ml-3 mbr-iconfont mbr-iconfont-social mbrib-help" media-simple="true"></div>
+                                <h3 class="rev mbr-fonts-style display-4">
+                                    0
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="mbr-section-btn"><a href="/market_place/product_view" class="btn btn-sm btn-primary-outline display-4">View</a></div>
+                    </div>
+                </div>
+            </div> -->
+
+
+        </div>
+    </div>
+</section>
+
+<section class="features01 cid-rZq2Re8t6T" id="features01-5">
+
+
+
+
+
+    <div class="container">
+        <h3 class="mbr-fonts-style mbr-section-title align-center mbr-bold mbr-black display-2">Auction Working&nbsp;<span>Process</span></h3>
+        <h4 class="mbr-fonts-style mbr-section-subtitle align-center pb-1 mbr-regular display-7">We are endorsed by the local trading standards office
+</h4>
+
+        <div class="media-container-row">
+
+          {% for step in process %}
+
+            <div class="card p-3 col-12 col-md-6 col-lg-3">
+                <div class="card-wrapper">
+                    <div class="card-img">
+                        <img src="/media/{{ step.img }}" alt="">
+                    </div>
+                    <div class="card-box">
+                        <h4 class="card-title mbr-bold pb-3 mbr-fonts-style display-7">{{ step.heading }}</h4>
+                        <p class="mbr-text mbr-fonts-style display-4">
+                          {{ step.detail }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            {% endfor %}
+
+            <!-- <div class="card p-3 col-12 col-md-6 col-lg-3">
+                <div class="card-wrapper">
+                    <div class="card-img">
+                        <img src="/static/assets/images/02.jpg" alt="">
+                    </div>
+                    <div class="card-box">
+                        <h4 class="card-title pb-3 mbr-fonts-style display-7">Electrical system</h4>
+                        <p class="mbr-text mbr-fonts-style display-4">Lorem
+                            ipsum
+                            dolor sit amet, consectetur adipiscing elitdo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card p-3 col-12 col-md-6 col-lg-3">
+                <div class="card-wrapper">
+                    <div class="card-img">
+                        <img src="/static/assets/images/03.jpg" alt="">
+                    </div>
+                    <div class="card-box">
+                        <h4 class="card-title pb-3 mbr-fonts-style display-7">System service</h4>
+                        <p class="mbr-text mbr-fonts-style display-4">Lorem
+                            ipsum
+                            dolor sit amet, consectetur adipiscing elitdo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card p-3 col-12 col-md-6 col-lg-3">
+                <div class="card-wrapper">
+                    <div class="card-img">
+                        <img src="/static/assets/images/04.jpg" alt="">
+                    </div>
+                    <div class="card-box">
+                        <h4 class="card-title pb-3 mbr-fonts-style display-7">Engine diagnostics</h4>
+                        <p class="mbr-text mbr-fonts-style display-4">Lorem
+                            ipsum
+                            dolor sit amet, consectetur adipiscing elitdo.
+                        </p>
+                    </div>
+                </div>
+            </div> -->
+
+
+        </div>
+    </div>
+</section>
+
+<section class="footer03 carm4_footer03 cid-sws55yS5KH" id="footer03-1g">
+
+
+
+
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="col-md-12 col-lg-3 logo-footer align-center">
+                <p class="text-logo-footer mbr-fonts-style mbr-bold mb-0 display-5">CarM4</p>
+            </div>
+            <div class="col-md-12 col-lg-6 copyright align-self-center">
+                <ul class="mbr-list list-inline align-center">
+
+
+
+
+
+                <li class="list-inline-item mbr-fonts-style display-4">
+                        <a href="#" class="text-white">Home</a>
+                    </li><li class="list-inline-item mbr-fonts-style display-4">
+                        <a href="#" class="text-white">About Us</a>
+                    </li><li class="list-inline-item mbr-fonts-style display-4">
+                        <a href="#" class="text-white">Services</a>
+                    </li><li class="list-inline-item mbr-fonts-style display-4">
+                        <a href="#" class="text-white">Booking</a>
+                    </li><li class="list-inline-item mbr-fonts-style display-4">
+                        <a href="#" class="text-white">Contact</a>
+                    </li></ul>
+            </div>
+            <div class="social-list pl-0 mb-0 col-md-12 col-lg-3 align-center social-btns align-self-center">
+                <div class="wrap">
+                    <a href="https://twitter.com/mobirise" target="_blank">
+
+                        <span class="px-1 socicon-instagram socicon mbr-iconfont mbr-iconfont-social"></span>
+                    </a>
+                    <a href="https://www.facebook.com/pages/Mobirise/1616226671953247" target="_blank">
+                        <span class="px-1 socicon-facebook socicon mbr-iconfont mbr-iconfont-social"></span>
+                    </a>
+
+                    <a href="https://instagram.com/mobirise" target="_blank">
+                        <span class="px-1 socicon-youtube socicon mbr-iconfont mbr-iconfont-social"></span>
+                    </a>
+                    <a href="https://www.youtube.com/c/mobirise" target="_blank">
+                        <span class="px-1 mbr-iconfont mbr-iconfont-social socicon-linkedin socicon"></span>
+                    </a>
+                    <a href="https://plus.google.com/u/0/+Mobirise" target="_blank">
+
+                    </a>
+                    <a href="https://www.behance.net/Mobirise" target="_blank">
+
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container copyrightPart justify-content-center mt-4">
+        <div class="col-lg-12">
+            <div class="wrap d-flex">
+                <p class="mbr-text align-center mbr-fonts-style align-left display-4">© CarM4 2025 Theme by Mobirise</p>
+                <ul class="mbr-list list-inline align-center">
+
+
+
+                <li class="list-inline-item mbr-fonts-style mr-3 display-4"><a href="#" class="text-info">Privacy Policy</a></li><li class="list-inline-item mbr-fonts-style mr-3 display-4"><a href="#" class="text-info">Term Of Service</a></li></ul>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script src="/static/assets/web/assets/jquery/jquery.min.js"></script>
+  <script src="/static/assets/popper/popper.min.js"></script>
+  <script src="/static/assets/tether/tether.min.js"></script>
+  <script src="/static/assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="/static/assets/smoothscroll/smooth-scroll.js"></script>
+  <script src="/static/assets/dropdown/js/nav-dropdown.js"></script>
+  <script src="/static/assets/dropdown/js/navbar-dropdown.js"></script>
+  <script src="/static/assets/touchswipe/jquery.touch-swipe.min.js"></script>
+  <script src="/static/assets/theme/js/script.js"></script>
+
+
+
+
+</body>
+</html>

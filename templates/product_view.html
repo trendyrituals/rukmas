@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html  >
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="/static/assets/images/rukmas-favicon-128x134.png" type="image/x-icon">
+  <meta name="description" content="">
+
+
+  <title>product_view</title>
+  <link rel="stylesheet" href="/static/assets/web/assets/mobirise-icons2/mobirise2.css">
+  <link rel="stylesheet" href="/static/assets/icons-mind/style.css">
+  <link rel="stylesheet" href="/static/assets/web/assets/mobirise-icons/mobirise-icons.css">
+  <link rel="stylesheet" href="/static/assets/tether/tether.min.css">
+  <link rel="stylesheet" href="/static/assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="/static/assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="/static/assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="/static/assets/socicon/css/styles.css">
+  <link rel="stylesheet" href="/static/assets/theme/css/style.css">
+  <link rel="preload" as="style" href="/static/assets/mobirise/css/mbr-additional.css">
+  <link rel="stylesheet" href="/static/assets/mobirise/css/mbr-additional.css" type="text/css">
+
+
+
+
+
+<meta name="theme-color" content="#ff513c">
+<link rel="manifest" href="/static/manifest.json">
+<script src="/static/sw-connect.js"></script>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="assets/images/apple-launch-640x1136.png">
+<link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="assets/images/apple-launch-750x1334.png">
+<link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="assets/images/apple-launch-1242x2208.png">
+<link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="assets/images/apple-launch-1125x2436.png">
+<link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="assets/images/apple-launch-1536x2048.png">
+<link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="assets/images/apple-launch-1668x2224.png">
+<link rel="apple-touch-startup-image" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="assets/images/apple-launch-2048x2732.png">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="RUKMAS">
+<link rel="apple-touch-icon" href="apple-touch-icon.png"></head>
+<body>
+
+  <section class="extMenu6 menu cid-sutFu7nUCh" once="menu" id="extMenu6-o">
+
+
+
+
+    <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
+        <div class="navbar-brand">
+            <span class="navbar-logo">
+                <a href="#">
+                    <img src="/static/assets/images/original-on-transparent-254x72.png" alt="" style="height: 2.8rem;">
+                </a>
+            </span>
+
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true"><li class="nav-item"><a class="nav-link link text-info text-primary display-4" href="/" aria-expanded="false">
+                        HOME</a></li>
+
+
+                <li class="nav-item"><a class="nav-link link text-info text-primary display-4" href="/market_place" aria-expanded="false">LIVE AUCTION</a></li><li class="nav-item"><a class="nav-link link text-info text-primary display-4" href="/about" aria-expanded="false">ABOUT</a></li></ul>
+            <div class="navbar-buttons px-2 mbr-section-btn">
+              {% if request.user.is_authenticated %}
+              <a class="btn btn-sm btn-success display-4" href="/auth/logout">LOGOUT</a>
+              {% else %}
+              <a class="btn btn-sm btn-success display-4" href="/auth/login">LOGIN</a>
+              {% endif %}
+                  </div>
+
+
+
+        </div>
+    </nav>
+</section>
+
+<section class="extGallery testimonials-slider cid-sv2t2d293R" data-interval="false" id="extGallery6-p">
+
+
+
+    <div class="main container text-center">
+      <img class="img-fluid" src="/media/{{ item.img }}" alt="">
+</div>
+</section>
+
+<section class="extFeatures cid-sv2xBuxHFq" id="extFeatures8-u">
+
+
+
+
+	<div class="container">
+
+
+		<div class="row justify-content-center pt-4">
+			<div class="col-md-6 col-lg-3 row-item">
+				<div class="wrapper">
+					<div class="card-img pb-3 align-center">
+						<span class="mbr-iconfont mbri-calendar" style="color: rgb(255, 78, 60); fill: rgb(255, 78, 60);"></span>
+					</div>
+					<h4 class="mbr-fonts-style mbr-card-title align-center display-7">{{ item.year }}</h4>
+				</div>
+			</div>
+
+			<div class="col-md-6 col-lg-3 row-item">
+				<div class="wrapper">
+					<div class="card-img pb-3 align-center">
+						<span class="mbr-iconfont mbri-delivery" style="color: rgb(255, 78, 60); fill: rgb(255, 78, 60);"></span>
+					</div>
+					<h4 class="mbr-fonts-style mbr-card-title align-center display-7">{{ item.driven }} km</h4>
+				</div>
+			</div>
+
+			<div class="col-md-6 col-lg-3 row-item">
+				<div class="wrapper">
+					<div class="card-img pb-3 align-center">
+						<span class="mbr-iconfont mbri-quote-left" style="color: rgb(255, 78, 60); fill: rgb(255, 78, 60);"></span>
+					</div>
+					<h4 class="mbr-fonts-style mbr-card-title align-center display-7">{{ item.fuel_type }}</h4>
+				</div>
+			</div>
+
+			<div class="col-md-6 col-lg-3 row-item">
+				<div class="wrapper">
+					<div class="card-img pb-3 align-center">
+						<span class="mbr-iconfont mbri-setting" style="color: rgb(255, 78, 60); fill: rgb(255, 78, 60);"></span>
+					</div>
+					<h4 class="mbr-fonts-style mbr-card-title align-center display-7">{{ item.transmission_type }}</h4>
+				</div>
+			</div>
+			<div class="col-md-6 col-lg-3 row-item">
+				<div class="wrapper">
+					<div class="card-img pb-3 align-center">
+						<span class="mbr-iconfont mbri-user" style="color: rgb(255, 78, 60); fill: rgb(255, 78, 60);"></span>
+					</div>
+					<h4 class="mbr-fonts-style mbr-card-title align-center display-7">{{ item.number_of_owner }}</h4>
+				</div>
+			</div>
+			<div class="col-md-6 col-lg-3 row-item">
+				<div class="wrapper">
+					<div class="card-img pb-3 align-center">
+						<span class="mbr-iconfont mbri-key" style="color: rgb(255, 78, 60); fill: rgb(255, 78, 60);"></span>
+					</div>
+					<h4 class="mbr-fonts-style mbr-card-title align-center display-7">dealer</h4>
+				</div>
+			</div>
+			<div class="col-md-6 col-lg-3 row-item">
+				<div class="wrapper">
+					<div class="card-img pb-3 align-center">
+						<span class="mbr-iconfont mbri-globe" style="color: rgb(255, 78, 60); fill: rgb(255, 78, 60);"></span>
+					</div>
+					<h4 class="mbr-fonts-style mbr-card-title align-center display-7">{{ item.location }} {{ item.registration_state }}</h4>
+				</div>
+			</div>
+			<div class="col-md-6 col-lg-3 row-item">
+				<div class="wrapper">
+					<div class="card-img pb-3 align-center">
+						<span class="mbr-iconfont mbri-protect" style="color: rgb(255, 78, 60); fill: rgb(255, 78, 60);"></span>
+					</div>
+					<h4 class="mbr-fonts-style mbr-card-title align-center display-7">No insurance&nbsp;</h4>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="pricing1 carm4_pricing1 cid-rMhlcksklP" id="pricing-table01-v">
+
+
+
+
+    <div class="container">
+        <div class="row justify-content-center">
+
+
+            <div class="card col-12 col-md-6 col-lg-6">
+                <div class="card-wrapper">
+
+                    <div class="card-box align-center">
+                        <h4 class="card-subtitle align-center mbr-semibold mbr-black mbr-fonts-style display-5">STARTING BID</h4>
+
+                        <p class="mbr-text pt-4 start-from mbr-regular mbr-fonts-style display-7">START FROM
+                        </p>
+                        <div class="price-wrap">
+                            <span class="mbr-usd pb-4 mbr-bold mbr-fonts-style display-1">Rs</span>
+                            <span class="mbr-price pb-4 mbr-bold mbr-fonts-style display-1">{{ item.expected_price }}</span>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="card col-12 col-md-6 col-lg-6">
+
+                <div class="card-wrapper">
+                    <div class="card-box align-center">
+                        <h4 class="card-subtitle align-center mbr-semibold mbr-black mbr-fonts-style display-5">
+                            PLACE YOUR BID</h4>
+
+                        <p class="mbr-text pt-4 start-from mbr-regular mbr-fonts-style display-7">
+                            <a class="btn btn-info" href="/bid/{{ item.id }}">CLICK HERE</a>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+
+
+</section>
+
+<section class="mbr-section article extСontent cid-svknoWynwn" id="extContent3-x">
+
+
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="mbr-text col-12 col-md-8 display-7">
+                <div class="flex-block">
+                    <span class="mbr-iconfont mbri-quote-right"></span>
+                    <p class="mbr-fonts-style block-quote display-7"><strong>Make your own website in a few clicks!</strong> Mobirise helps you cut down development time by providing you with a flexible website editor with a drag and drop interface. Mobirise Website Builder creates responsive, retina and <strong>mobile friendly websites</strong> in a few clicks. Mobirise is one of the easiest website development tools <a href="#">available</a> today. It also gives you the freedom to develop as many websites as you like given the fact that it is a desktop app.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="extFooter&quot; cid-svknj5f8ae" id="extFooter4-w">
+
+
+
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-12 col-lg-7 px-4 align-right">
+                <div class="social-list">
+                    <div class="soc-item">
+                        <a href="https://twitter.com/mobirise" target="_blank">
+                            <span class="mbr-iconfont mbr-iconfont-social socicon-behance socicon" style="color: rgb(87, 70, 139); fill: rgb(87, 70, 139);"></span>
+                        </a>
+                    </div>
+                    <div class="soc-item">
+                        <a href="https://www.facebook.com/pages/Mobirise/1616226671953247" target="_blank">
+                            <span class="mbr-iconfont mbr-iconfont-social socicon-dribbble socicon" style="color: rgb(87, 70, 139); fill: rgb(87, 70, 139);"></span>
+                        </a>
+                    </div>
+                    <div class="soc-item">
+                        <a href="https://www.youtube.com/c/mobirise" target="_blank">
+                            <span class="mbr-iconfont mbr-iconfont-social socicon-instagram socicon" style="color: rgb(87, 70, 139); fill: rgb(87, 70, 139);"></span>
+                        </a>
+                    </div>
+                    <div class="soc-item">
+                        <a href="https://instagram.com/mobirise" target="_blank">
+                            <span class="mbr-iconfont mbr-iconfont-social socicon-vkontakte socicon" style="color: rgb(87, 70, 139); fill: rgb(87, 70, 139);"></span>
+                        </a>
+                    </div>
+                    <div class="soc-item">
+                        <a href="https://plus.google.com/u/0/+Mobirise" target="_blank">
+                            <span class="mbr-iconfont mbr-iconfont-social socicon-googleplus socicon" style="color: rgb(87, 70, 139); fill: rgb(87, 70, 139);"></span>
+                        </a>
+                    </div>
+
+
+
+
+
+
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-2 m-auto px-4 align-right">
+                <p class="mbr-text mb-0 links mbr-fonts-style display-4"><a href="#" class="text-warning">Privacy</a> &nbsp;| &nbsp;<a href="#" class="text-warning">Integrity
+                    </a> </p>
+            </div>
+            <div class="col-md-12 col-lg-3 m-auto px-4 align-left">
+                <p class="mbr-text mb-0 mbr-fonts-style display-4">© Copyright 2025 Mobirise</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script src="/static/assets/web/assets/jquery/jquery.min.js"></script>
+  <script src="/static/assets/popper/popper.min.js"></script>
+  <script src="/static/assets/tether/tether.min.js"></script>
+  <script src="/static/assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="/static/assets/smoothscroll/smooth-scroll.js"></script>
+  <script src="/static/assets/dropdown/js/nav-dropdown.js"></script>
+  <script src="/static/assets/dropdown/js/navbar-dropdown.js"></script>
+  <script src="/static/assets/touchswipe/jquery.touch-swipe.min.js"></script>
+  <script src="/static/assets/bootstrapcarouselswipe/bootstrap-carousel-swipe.js"></script>
+  <script src="/static/assets/mbr-testimonials-slider/mbr-testimonials-slider.js"></script>
+  <script src="/static/assets/sociallikes/social-likes.js"></script>
+  <script src="/static/assets/theme/js/script.js"></script>
+
+
+
+
+</body>
+</html>

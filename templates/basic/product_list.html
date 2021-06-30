@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Products</title>
+  </head>
+  <body>
+    <p>
+      <small>{{ user }}</small> | <small><a href="/auth/logout">LOGOUT</a></small>
+    </p>
+    <p><strong>ALL PRODUCTS</strong></p>
+
+    {% for product in list %}
+      <div style="border: 1px solid black;width:250px;text-align:center;padding:20px;">
+        <img src="/media/{{ product.img }}" alt="" style="width:150px;height:150px;"><br>
+        {{ product.company_name }}
+        {{ product.model }}
+        {{ product.sub_class }} <br>
+        {{ product.year }}<br>
+        {{ product.expected_price }} Rs <br>
+
+        <a href="product_view/{{ product.id }}">Bid</a>
+      </div>
+    {% endfor %}
+  </body>
+</html>

@@ -1,0 +1,18 @@
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Bid On</title>
+  </head>
+  <body>
+    <p><strong>BID ON PRODUCT ID: {{ product.company_name }} {{ product.model }} {{ product.sub_class }}</strong></p>
+
+    <form action="" method="post">{% csrf_token %}
+      <p><small>Bid starts from {{ product.expected_price }} dont include .*{/</small></p>
+      {{ form | crispy }}
+      <input type="submit" name="" value="SUBMIT">
+    </form>
+
+  </body>
+</html>

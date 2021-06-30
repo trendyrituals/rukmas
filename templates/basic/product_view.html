@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Product Detail</title>
+  </head>
+  <body>
+    <p><strong>PRODUCT VIEW PAGE</strong></p>
+
+    <img src="/media/{{ item.img }}" alt="" style="width:200px;"><br>
+    {{ item.company_name }}<br>
+    {{ item.model }}<br>
+    {{ item.year }}<br>
+    {{ item.driven }}<br>
+    {{ item.color }}<br>
+    {{ item.transmission_type }}<br>
+    {{ item.body_type }}<br>
+    {{ item.number_of_owner }}<br>
+    {{ item.fuel_type }}<br>
+    {{ item.location }}<br>
+    {{ item.registration_state }}<br>
+    {{ item.expected_price }} Rs<br>
+    {{ item.time }}<br>
+    <a href="/bid/{{ item.id }}">bid</a>
+  </body>
+</html>

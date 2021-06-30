@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <p><strong>WELCOME ON DASHBOARD</strong></p>
+
+    {% for bid in bids %}
+      {{ bid.id }}<br>
+      {{ bid.bid_amt }}<br>
+      {{ bid.product_id }}<br>
+      {{ bid.status }}
+    {% endfor %}
+  </body>
+</html>
